@@ -231,43 +231,6 @@ def aStarSearch(problem, heuristic=nullHeuristic):
     # Caso nao encontre nenhum caminho, nao faz nada    
     return []
 
-    # Inicializando o estado inicial de busca
-    # currentState = problem.getStartState()
-    # currentNode = Node(currentState, [], 0)
-
-    # # Conjunto do estados expandidos e nao vizitados
-    # openSet = PriorityQueue()
-    # # Conjunto de estados ja vizitados
-    # closedSet = set()
-
-    # while not problem.isGoalState(currentNode.state):
-    #     # Itera sobre os vizinhos do estado atual
-    #     for state, direction, cost in problem.getSuccessors(currentNode.state):
-    #         # Cria um novo no para o vizinho
-    #         newNodePath = currentNode.path + [direction]
-    #         newNodeCost = currentNode.cost + cost + heuristic(state, problem)
-    #         newNode = Node(state, newNodePath, newNodeCost)
-
-    #         # Adiciona ao openSet caso ainda nao tenha sido vizitado
-    #         if newNode.state not in closedSet:
-    #             sameNodeInOpenSet = None
-    #             for _,_,node in openSet.heap:
-    #                 if node.state == newNode.state:
-    #                     sameNodeInOpenSet = node
-    #             if sameNodeInOpenSet:
-    #                 if sameNodeInOpenSet.cost > newNodeCost:
-    #                     openSet.push(newNode)
-    #                     openSet.update(sameNodeInOpenSet, newNodeCost)
-    #             else:
-    #                 openSet.push(newNode, newNodeCost)
-
-    #     # Caminha para o novo estado com menor custo            
-    #     currentNode = openSet.pop()
-    #     closedSet.add(currentNode.state)
-
-    # return currentNode.path
-
-
 # Abbreviations
 bfs = breadthFirstSearch
 dfs = depthFirstSearch
